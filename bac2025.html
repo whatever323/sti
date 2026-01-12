@@ -1,0 +1,81 @@
+ <!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<script src="sti.js"> </script>
+
+<title>Evaluation d'une manifestation</title>
+
+<meta charset="utf-8">
+
+<meta name="Description" content="Cette page permet l'évaluation des manifestations.">
+
+<link rel="stylesheet" type="text/css" href="mesStyles.css">
+
+</head>
+
+<body onload="inconnue()">
+ 
+ <form id="f" name="f" action="evaluation.php" method="POST" onsubmit="return verif ()">
+
+<fieldset>
+
+<legend>Evaluation d'une manifestation</legend>
+
+<label>Manifestation :</label>
+
+<select id="manif" name="manif">
+
+<option selected>Choisir une manifestation</option>
+
+<option value="M0001">Foire du livre</option>
+
+<option value="M0002">Salon de l'Art</option>
+
+<option value="M0003">Séminaire des médecins</option>
+
+</select><br>
+
+<hr>
+
+<label class="labserv">Service</label> <label id="labnote">Note</label><br><br>
+
+<label class="service">Accueil:</label>
+
+<input type="range" id="serv1" name="serv1" min="0" max="5"
+
+onchange="fff('serv1', 'imgser1'); calcultotal();"/>
+
+<img id="imgser1" src="x1.jpg" width="150" height="20" alt="Note attribuée à l'accueil"><br>
+
+<label class="service">Confort: </label>
+
+<input type="range" id="serv2" name="serv2" min="0" max="5"
+
+onchange="fff('serv2', 'imgser2'); calcultotal();"/>
+<img id="imgser2" src="x2.jpg" width="150" height="20" alt="Note attribuée au confort"><br>
+
+<label class="service">Signalétique :</label>
+
+<input type="range" id="serv3" name="serv3" min="0" max="5"
+
+onchange="fff('serv3', 'imgser3'); calcultotal();"/>
+
+<img id="imgser3" src="x3.jpg" width="150" height="20" alt="Note attribuée à la signalétique"><br>
+
+<label class="service">Logistique :</label>
+
+<input type="range" id="serv4" name="serv4" min="0" max="5"
+onchange="fff('serv4', 'imgser4'); calcultotal();"/>
+
+<img id="imgser4" src="x4.jpg" width="150" height="20" alt="Note attribuée à la logistique"><br>
+
+<label class="service">Note totale:</label>
+<span id="total">0/20</span><br>
+<div>
+    <input name="valider" type="submit" value="valider">
+    <input name="annuler" type="reset" value="annuler">
+</div>
+</fieldset>
+</form>
+</body>
+</html>

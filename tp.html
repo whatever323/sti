@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #5a2be2, #2b9be2);
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            width: 450px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        h2 { margin-bottom: 5px; }
+        .captcha-box {
+            padding: 15px;
+            margin: 20px 0;
+            background: #f2f2f2;
+            border-radius: 10px;
+            font-size: 35px;
+            letter-spacing: 10px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 5px;
+        }
+        .btn-blue { background: #1e90ff; }
+        .btn-red { background: #ff5733; }
+        .btn-purple { background: #9b59b6; }
+        input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        select {
+            padding: 10px;
+            width: 180px;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        </style>
+</head>
+<body>
+<div class="container">
+    <h2>Générateur de Captcha Aléatoire</h2>
+    <p>Générez un code captcha sécurisé et testez sa validation</p>
+
+    <div id="captcha" class="captcha-box">XXXXXX</div>
+
+    <button class="btn-blue" onclick="generateCaptcha()">Générer Captcha</button>
+    <button class="btn-red" onclick="generateCaptcha()">Actualiser</button>
+
+    <div class="section">
+        <h3>Vérification du Captcha</h3>
+        <input type="text" id="userInput" placeholder="Entrez le captcha affiché">
+        <button class="btn-purple" onclick="verifyCaptcha()">Vérifier</button>
+
+        <p id="message"></p>
+    </div>
+
+    <div class="section">
+        <label>Longueur du captcha :</label>
+        <select id="lengthSelect">
+            <option value="4">4 caractères</option>
+            <option value="5" selected>5 caractères</option>
+            <option value="6">6 caractères</option>
+            <option value="7">7 caractères</option>
+        </select>
+
+        <label>Type de caractères :</label>
+        <select id="typeSelect">
+            <option value="alpha">Alphabetique</option>
+            <option value="num">Numérique</option>
+            <option value="alphanum" selected>Alphanumérique</option>
+        </select>
+    </div>
+
+</div>
+
+    
+    <script src="tp.js"></script>
+
+
+    
+
+</body>
+</html>

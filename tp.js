@@ -15,7 +15,7 @@ generatedCaptcha = "";
             captcha += chars.charAt(Math.floor(Math.random() * chars.length));
         }
 
-        generatedCaptcha = captcha;
+        
         document.getElementById("captcha").textContent = captcha;
         document.getElementById("message").textContent = "";
     }
